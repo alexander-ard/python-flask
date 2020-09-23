@@ -1,0 +1,45 @@
+
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %} Personas {% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<table class="table" border="1">
+    <thead>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Apellido
+        </th>
+        <th>
+            Edad
+        </th>
+        <th>
+            Ciudad
+        </th>
+    </thead>
+    <tbody>
+        {% for persona in lista %}
+        <tr>
+            <td>
+                {{ persona.nombre }}
+            </td>
+            <td>
+                {{ persona.apellido }}
+            </td>
+            <td>
+                {{ persona.edad }}
+            </td>
+            <td>
+                {{ persona.ciudad }}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a href="/crear" class="btn btn-danger">Crear persona</a>
+{% endblock %}
