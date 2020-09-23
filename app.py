@@ -12,4 +12,8 @@ def world():
 
 @app.route("/hello/<name>")
 def hello(name): 
-    return f"Hola, {name}"
+    return f"Hola, {name}" 
+
+@app.route("/helloX/<name>")
+def helloX(name): 
+    return f"HolaX, {name}" 
